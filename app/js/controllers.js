@@ -9,7 +9,7 @@ angular.module('fifaApp')
 	.controller('TeamsListCtrl', ['FifaService', function(FifaService) {
 		var vm=this;
 		vm.teams = [];
-		FifaService.getTeams.then(function(resp) {
+		FifaService.getTeams().then(function(resp) {
 			vm.teams = resp.data;
 		});
 	}])
