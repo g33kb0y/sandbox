@@ -2,10 +2,10 @@ angular.module('fifaApp')
 	.factory('FifaService', ['$http', function($http) {
 		return {
 			getTeams: function() {
-				return $http.get('/api/team');
+				return $http.get('/dev/app/api/team.json');
 			},
 			getTeamDetails: function(code) {
-				return $http.get('/api/team/'+code);
+				return $http.get('/dev/app/api/team/'+code);
 			}
 		}
 	}])
@@ -13,7 +13,7 @@ angular.module('fifaApp')
 		var service = {
 			isLoggedIn: false,
 			session: function() {
-				return $http.get('/api/session')
+				return $http.get('/dev/app/api/session.json')
 					.then(function(response) {
 						service.isLoggedIn = true;
 						return response;
