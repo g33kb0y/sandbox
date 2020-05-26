@@ -6,7 +6,7 @@ angular.module('fifaApp')
 		UserService.session();
 	}])
 
-	.controller('TeamListCtrl', ['FifaService', function(FifaService) {
+	.controller('TeamsListCtrl', ['FifaService', function(FifaService) {
 		var vm=this;
 		vm.teams = [];
 		FifaService.getTeams.then(function(resp) {
