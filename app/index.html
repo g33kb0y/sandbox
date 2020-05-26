@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>FIFA Teams</title>
+		<link rel="css/boostrap-3.3.7.min.css">
+		<link rel="css/boostrap-themes-3.3.7.min.css">
+		<link rel="css/main.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</head>
+
+	<body ng-app="fifaApp" class="landing">
+		<div class="top-bar" ng-controllerr="MainCtrl as mainCtrl">
+			<div class="pull-left">
+				<span><a href="#/">FIFA Teams</a></span>				
+			</div>
+			<div class="pull-right">
+				<span ng-hide="mainCtrl.userService.isLoggedIn"><a href="#/login">Login</a></span>
+				<span ng-show="mainCtrl.userService.isLoggedIn"><a href="#/logout">Logout</a></span>
+			</div>
+		</div>
+
+		<div ng-view></div>
+
+		<script src="js/angular.min.js"></script>
+		<script src="js/angular-route.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/services.js"></script>
+		<script src="js/controllers.js"></script>
+
+	</body>
+
+</html>
